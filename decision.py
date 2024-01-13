@@ -35,9 +35,9 @@ def get_number_cell(cell: tuple[int, int]) -> int:
             if cell not in visited_cells:
                 visited_cells.add(cell)
                 allowed_cells += 1
-            for cell in directs_cell(cell):
-                if cell not in visited_cells and check_sell(cell):
-                    stack_cells.append(cell)
+                for cell in directs_cell(cell):
+                    if cell not in visited_cells and check_sell(cell):
+                        stack_cells.append(cell)
 
     return allowed_cells
 
